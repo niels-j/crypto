@@ -41,7 +41,11 @@
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textColor="#000000"
-        android:inputType="text"></EditText>
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:maxLength="32"
+        android:maxLines="8"
+        android:inputType="textMultiLine"></EditText>
 
     <Button
         android:id="@+id/decryptButton"

@@ -8,12 +8,22 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Crypto extends AppCompatActivity {
+
+  // The attributes of this activity are the views
+  // and the welcome message to be displayet in the topmost TextView
+
+  TextView welcomeTextView;
+  Button symmetricEncryptionButton, hashingButton;
+  String welcomeMessage = " Welcome to crypto\n"
+                          + " - please select an algorithm type";
+
+  // method onCreate() instantiates views based on XML file crypto.xml
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.crypto);
 
-    // Widgets created as defined in res/layout/crypto.xml
     welcomeTextView = (TextView) findViewById(R.id.welcomeTextView);
     welcomeTextView.setText(welcomeMessage);
     symmetricEncryptionButton = (Button) findViewById(R.id.symmetricencryptionButton);
@@ -27,7 +37,6 @@ public class Crypto extends AppCompatActivity {
     hashingButton = (Button) findViewById(R.id.hashingButton);
     hashingButton.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
-        System.out.println("Crypto: hashing selected");
         Intent i = new Intent(getApplicationContext(),
                             nielsj.crypto.view.Hashing.class);
         startActivity(i);
@@ -35,9 +44,5 @@ public class Crypto extends AppCompatActivity {
     });
   }
 
-  TextView welcomeTextView;
-  Button symmetricEncryptionButton, hashingButton;
 
-  String welcomeMessage = " Welcome to crypto\n"
-                          + " - please select a mechanism";
 }

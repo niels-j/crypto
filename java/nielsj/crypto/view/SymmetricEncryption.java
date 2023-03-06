@@ -6,12 +6,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
 import nielsj.crypto.R;
 import nielsj.crypto.model.*;
-// import nielsj.crypto.control.UISymmetricEncryption;
+
+// class SymmetricEncryption is the user interface to symmetric encryption
 
 public class SymmetricEncryption extends AppCompatActivity {
+
+  // Most attributes of this activity are the views
+  TextView guideTextView, decryptedTextView;
+  Button encryptButton, decryptButton;
+  EditText plaintextEditText, encryptedEditText;
+
+  // The other main attribute is the crypto object
+  // that does the cryptographic work
+
+  nielsj.crypto.model.SymmetricEncryption crypto = new AES();
+
+  // Methods
+
+  // onCreate() instantiates views based on XML file symmetricencryption.xml
+  // and let buttons trigger the crypto object
+  // to do encryption and decryption
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -39,10 +56,5 @@ public class SymmetricEncryption extends AppCompatActivity {
     decryptedTextView = (TextView) findViewById(R.id.decryptedTextView);
   }
 
-  // nielsj.crypto.model.SymmetricEncryption crypto = new Caesar();
-  nielsj.crypto.model.SymmetricEncryption crypto = new AES();
-  // UISymmetricEncryption uiSymmetricEncryption;
-  TextView guideTextView, decryptedTextView;
-  Button encryptButton, decryptButton;
-  EditText plaintextEditText, encryptedEditText;
+
 }

@@ -1,10 +1,9 @@
 package nielsj.crypto.control;
 
-// class Hex provides a set of formatting methods for
-// conversion between hex string vs. byte array.
+// class Hex provides a set of formatting methods
+// for conversion between hex string vs. byte array.
 
 // There are 16 hex digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
-
 // A hex string provides a human-readable view
 // of a byte array with arbitrary bytes
 

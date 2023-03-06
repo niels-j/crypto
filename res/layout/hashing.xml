@@ -3,22 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFD4EC"
     android:columnCount="2"
     android:rowCount="2"
+    android:shrinkColumns="true"
     android:useDefaultMargins="true"
     tools:context="nielsj.crypto.view.Hashing">
-
-    <!--
-    <TextView
-        android:id="@+id/mechanismTextView"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:text="Mechanism: hashing"></TextView>
-        -->
 
     <TextView
         android:id="@+id/guideTextView"
@@ -52,6 +41,10 @@
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textColor="#000000"
+        android:ellipsize="none"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:singleLine="false"
         android:inputType="text"></TextView>
 
 

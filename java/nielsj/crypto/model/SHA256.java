@@ -1,0 +1,30 @@
+package nielsj.crypto.model;
+
+import java.security.MessageDigest;
+
+import nielsj.crypto.control.Hex;
+public class SHA256 {
+  public SHA256() {
+
+    try {
+      digest = MessageDigest.getInstance("SHA-256");
+    } catch (Exception e) {
+      System.out.println("SHA256: error in constructor");
+      System.out.println(e);
+    }
+  }
+
+  MessageDigest digest;
+
+  public String hash(String inputText){
+    byte[] input = inputText.getBytes();
+    byte[] hashValue = sha256Hash(input);
+    String hashValueText = Hex.byteArrayToHexString(hashValue);
+    return hashValueText;
+  }
+
+  private byte[] sha256Hash(byte[] input) {
+    byte[] hashValue = digest.digest(input);
+    return hashValue;
+  }
+}
