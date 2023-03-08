@@ -22,6 +22,7 @@ public class SymmetricEncryption extends AppCompatActivity {
   // that does the cryptographic work
 
   nielsj.crypto.model.SymmetricEncryption crypto = new AES();
+  // nielsj.crypto.model.SymmetricEncryption crypto = new Caesar();
 
   // Methods
 

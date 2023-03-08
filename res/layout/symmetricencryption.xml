@@ -14,16 +14,17 @@
         android:layout_row="0"
         android:layout_column="0"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="#000000"
-        android:text="Type plaintext"></TextView>
+        android:text="Type plaintext: "></TextView>
 
     <EditText
         android:id="@+id/plaintextEditText"
         android:layout_row="0"
         android:layout_column="1"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:textColor="#000000"
+        android:typeface="monospace"
         android:inputType="text"></EditText>
 
     <Button
@@ -31,7 +32,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:text="Encrypt"></Button>
 
     <EditText
@@ -39,12 +40,11 @@
         android:layout_row="1"
         android:layout_column="1"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:textColor="#000000"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:maxLength="32"
-        android:maxLines="8"
+        android:typeface="monospace"
         android:inputType="textMultiLine"></EditText>
 
     <Button
@@ -52,7 +52,7 @@
         android:layout_row="2"
         android:layout_column="0"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:text="Decrypt"></Button>
 
     <TextView
@@ -60,7 +60,12 @@
         android:layout_row="2"
         android:layout_column="1"
         android:textAllCaps="false"
-        android:textSize="16sp"
-        android:textColor="#000000"></TextView>
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:typeface="monospace"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="textMultiLine">
+    </TextView>
 
 </GridLayout>

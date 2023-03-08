@@ -1,5 +1,7 @@
 package nielsj.crypto.model;
 
+import nielsj.crypto.control.Hex;
+
 public class Caesar implements SymmetricEncryption {
 
   public Caesar() {
@@ -14,7 +16,8 @@ public class Caesar implements SymmetricEncryption {
       char c = plaintext.charAt(i);
       cs[i] = caesarEncrypt(c, key);
     }
-    return new String(cs);
+    String ciphertext = new String(cs);
+    return ciphertext;
   }
 
   public char caesarEncrypt(char c, int key) {

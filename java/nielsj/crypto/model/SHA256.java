@@ -20,7 +20,8 @@ public class SHA256 {
     byte[] input = inputText.getBytes();
     byte[] hashValue = sha256Hash(input);
     String hashValueText = Hex.byteArrayToHexString(hashValue);
-    return hashValueText;
+    String blocks = Hex.hexStringToMultiLine(hashValueText,32);
+    return blocks;
   }
 
   private byte[] sha256Hash(byte[] input) {

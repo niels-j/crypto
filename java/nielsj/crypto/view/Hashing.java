@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import nielsj.crypto.R;
-import nielsj.crypto.model.SHA256;
+import nielsj.crypto.model.*;
 
 // class Hashing is the user interface to Hashing
 
@@ -17,7 +17,7 @@ public class Hashing extends AppCompatActivity {
   TextView guideTextView, hashvalueTextView;
   EditText inputEditText;
   Button hashButton;
-  SHA256 sha256 = new SHA256();
+  SHA256 crypto = new SHA256();
 
   // Methods
 
@@ -38,7 +38,7 @@ public class Hashing extends AppCompatActivity {
     hashButton.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
         String input = inputEditText.getText().toString();
-        String hashValue = sha256.hash(input);
+        String hashValue = crypto.hash(input);
         hashvalueTextView.setText(hashValue);
       }
     });

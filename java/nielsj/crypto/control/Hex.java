@@ -43,6 +43,37 @@ public class Hex {
     return sb.toString();
   }
 
+  public static String hexStringToMultiLine(String hexString, int charPerLine) {
+    int inLength = hexString.length();
+    StringBuffer sb = new StringBuffer("");
+    String s = sb.toString();
+    int localc = 0;
+    for (int i = 0; i < inLength; i++) {
+      sb.append(hexString.charAt(i));
+      localc++;
+      if (localc == charPerLine && i + 1 < inLength ) {
+        sb.append("\n");
+        localc = 0;
+      }
+    }
+    return sb.toString();
+  }
+  public static String hexStringToSingleLine(String hexString) {
+   // System.out.println("Hex: converting to single line");
+    int inLength = hexString.length();
+    StringBuffer sb = new StringBuffer("");
+    String s = sb.toString();
+    char c;
+    for (int i = 0; i < inLength; i++) {
+      c = hexString.charAt(i);
+    //  System.out.println(c + " as int: " + (int) c);
+      if (c != '\n') {
+        sb.append(c);
+      }
+    }
+    return sb.toString();
+  }
+
   /*********************
    *  private methods  *
    *********************/

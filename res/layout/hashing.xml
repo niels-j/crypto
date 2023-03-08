@@ -14,16 +14,17 @@
         android:layout_row="0"
         android:layout_column="0"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="#000000"
-        android:text="Type input text"></TextView>
+        android:text="Type input text: "></TextView>
 
     <EditText
         android:id="@+id/inputEditText"
         android:layout_row="0"
         android:layout_column="1"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:textColor="#000000"
+        android:typeface="monospace"
         android:inputType="text"></EditText>
 
     <Button
@@ -39,13 +40,13 @@
         android:layout_row="1"
         android:layout_column="1"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:textColor="#000000"
         android:ellipsize="none"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:singleLine="false"
-        android:inputType="text"></TextView>
+        android:typeface="monospace"
+        android:inputType="textMultiLine"></TextView>
 
 
 
