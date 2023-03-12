@@ -15,3 +15,18 @@ Secondly, in the project, go to the directory /app/src/main. In this directory, 
     the directory java/nielsj/crypto
     etc.
 
+The files added or revised most recently (12 March 2023) are:
+
+.java:
+------
+3 files
+model/RSA.java
+view/AsymmetricEncryption
+Crypto.java
+
+.xml
+----
+3 files
+AndroidManifest.xml 
+res/layout/crypto.xml
+res/layout/asymmetricencryption.xml

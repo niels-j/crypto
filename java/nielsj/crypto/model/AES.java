@@ -5,17 +5,16 @@ import java.security.Security;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-// import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.IvParameterSpec;
 
 import nielsj.crypto.control.*;
 
 public class AES implements SymmetricEncryption {
 
   public AES() {
-    initECB();
-  //  initCBC();
+  // initECB();
+    initCBC();
   }
-
 
   private Cipher cipher;
   private SecretKeySpec key;
@@ -25,7 +24,6 @@ public class AES implements SymmetricEncryption {
   /*******************
    * public methods  *
    *******************/
-
 
   // encryption
 
@@ -47,9 +45,8 @@ public class AES implements SymmetricEncryption {
   public byte[] aesEncrypt(byte[] plainBytes) {
     byte[] cipherBytes = {};
     try {
-     cipher.init(Cipher.ENCRYPT_MODE, key);
-     // cipher.init(Cipher.ENCRYPT_MODE, key, new IvParameterSpec(iv) );
-
+      // cipher.init(Cipher.ENCRYPT_MODE, key);
+      cipher.init(Cipher.ENCRYPT_MODE, key, new IvParameterSpec(iv) );
       cipherBytes = cipher.doFinal(plainBytes);
     } catch (Exception e) {
       System.out.println("AES: encryption error");
@@ -74,8 +71,8 @@ public class AES implements SymmetricEncryption {
   public byte[] aesDecrypt(byte[] cipherBytes) {
     byte[] plainBytes = {};
     try {
-      cipher.init(Cipher.DECRYPT_MODE, key);
-     // cipher.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec(iv) );
+      // cipher.init(Cipher.DECRYPT_MODE, key);
+      cipher.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec(iv) );
       plainBytes = cipher.doFinal(cipherBytes);
     } catch (Exception e) {
       System.out.println("AES: decryption error");

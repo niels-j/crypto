@@ -27,6 +27,10 @@
             android:name="nielsj.crypto.view.Hashing"
             android:exported="false">
         </activity>
+        <activity
+            android:name="nielsj.crypto.view.AsymmetricEncryption"
+            android:exported="false">
+        </activity>
 
     </application>
 

@@ -13,7 +13,7 @@ public class Crypto extends AppCompatActivity {
   // and the welcome message to be displayet in the topmost TextView
 
   TextView welcomeTextView;
-  Button symmetricEncryptionButton, hashingButton;
+  Button symmetricEncryptionButton, hashingButton, asymmetricEncryptionButton;
   String welcomeMessage = " Welcome to crypto\n"
                           + " - please select an algorithm type";
 
@@ -26,7 +26,7 @@ public class Crypto extends AppCompatActivity {
 
     welcomeTextView = (TextView) findViewById(R.id.welcomeTextView);
     welcomeTextView.setText(welcomeMessage);
-    symmetricEncryptionButton = (Button) findViewById(R.id.symmetricencryptionButton);
+    symmetricEncryptionButton = (Button) findViewById(R.id.symmetricEncryptionButton);
     symmetricEncryptionButton.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
         Intent i = new Intent(getApplicationContext(),
@@ -40,6 +40,14 @@ public class Crypto extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(),
                             nielsj.crypto.view.Hashing.class);
         startActivity(i);
+      }
+    });
+    asymmetricEncryptionButton = (Button) findViewById(R.id.asymmetricEncryptionButton);
+    asymmetricEncryptionButton.setOnClickListener(new View.OnClickListener() {
+      public void onClick(View v) {
+      Intent i = new Intent(getApplicationContext(),
+              nielsj.crypto.view.AsymmetricEncryption.class);
+      startActivity(i);
       }
     });
   }

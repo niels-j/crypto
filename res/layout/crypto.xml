@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#CFD4EC"
     android:columnCount="1"
-    android:rowCount="3"
+    android:rowCount="4"
     android:useDefaultMargins="true"
     tools:context="nielsj.crypto.Crypto">
 
@@ -20,7 +20,7 @@
         android:textColor="#000000"></TextView>
 
     <Button
-        android:id="@+id/symmetricencryptionButton"
+        android:id="@+id/symmetricEncryptionButton"
         android:layout_row="1"
         android:layout_column="0"
         android:layout_width="wrap_content"
@@ -38,5 +38,15 @@
         android:textAllCaps="false"
         android:textSize="16sp"
         android:text="Hashing"></Button>
+
+    <Button
+        android:id="@+id/asymmetricEncryptionButton"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:text="Asymmetric encryption"></Button>
 
 </GridLayout>
