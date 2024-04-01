@@ -1,0 +1,32 @@
+Android app for experimenting with crypto
+
+Installation notes for Android Studio
+-------------------------------------
+
+This repository contains sources for an Android app for experimenting with cryptography.
+
+The sources are .java and .xml sources only.
+
+Firstly, create a new project in Android Studio. You are free to name the project 'crypto' or using any other project name. However, you must choose the name "nielsj.crypto" as the package name.
+
+Secondly, in the project, go to the directory /app/src/main. In this directory, you put the sources from GitHub, ie.,
+
+    the file AndroidManifest.XML
+    the directory java/nielsj/crypto
+    etc.
+
+The files added or revised most recently (12 March 2023) are:
+
+.java:
+------
+3 files
+model/RSA.java
+view/AsymmetricEncryption
+Crypto.java
+
+.xml
+----
+3 files
+AndroidManifest.xml 
+res/layout/crypto.xml
+res/layout/asymmetricencryption.xml

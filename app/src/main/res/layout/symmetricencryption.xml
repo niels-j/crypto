@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFD4EC"
+    android:columnCount="2"
+    android:rowCount="7"
+    android:useDefaultMargins="true"
+    tools:context="nielsj.crypto.control.SymmetricEncryptionControl">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:text="Symmetric encryption"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:background="#42ADF5"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#FFFFFF"></TextView>
+
+    <TextView
+        android:id="@+id/guideTextView"
+        android:text="Please select a symmetric algorithm"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#000000"></TextView>
+
+    <Button
+        android:id="@+id/caesarButton"
+        android:text="Caesar"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:textAllCaps="false"
+        android:textSize="15sp"></Button>
+
+    <Button
+        android:id="@+id/aesButton"
+        android:text="AES"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:textAllCaps="false"
+        android:textSize="15sp"></Button>
+
+    <RadioGroup
+        android:id="@+id/modeRadioGroup"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/ecbRadioButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="AES with ECB    "
+            android:checked="true"
+            android:textSize="15sp"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/cbcRadioButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="AES with CBC"
+            android:checked="false"
+            android:textSize="15sp"></RadioButton>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/paddingRadioGroup"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/noPaddingRadioButton"
+            android:checked="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="No padding  "
+            android:textSize="15sp"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/paddingRadioButton"
+            android:checked="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="PKCS5Padding"
+            android:textSize="15sp"></RadioButton>
+    </RadioGroup>
+
+</GridLayout>
